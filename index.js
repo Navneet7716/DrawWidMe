@@ -7,9 +7,7 @@ let io = require("socket.io")(httpServer);
 
 let connections = [];
 
-io.on("connection", (socket) => {
-
-
+io.on("connect", (socket) => {
   connections.push(socket);
   console.log(`${socket.id} connected`);
 
@@ -28,6 +26,7 @@ io.on("connection", (socket) => {
       if (con.id !== socket.id) {
         con.emit("ondown", { x: data.x, y: data.y });
       }
+    });
   });
 
   socket.on("disconnect", (reason) => {
