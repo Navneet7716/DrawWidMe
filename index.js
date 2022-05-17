@@ -15,7 +15,7 @@ io.on("connect", (socket) => {
     // socket.to("navneet").emit("ondraw", { x: data.x, y: data.y });
     connections.forEach((con) => {
       if (con.id !== socket.id) {
-        conemit("ondraw", { x: data.x, y: data.y });
+        con.emit("ondraw", { x: data.x, y: data.y });
       }
     });
   });
