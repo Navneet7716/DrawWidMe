@@ -3,7 +3,7 @@ let canvas = document.getElementById("canvas");
 canvas.width = 0.98 * window.innerWidth;
 canvas.height = 0.98 * window.innerHeight;
 
-var io = io.connect("https://draw-wid-me.herokuapp.com/");
+var io = io.connect("ws://draw-wid-me.herokuapp.com/socket.io/?EIO=4&transport=websocket");
 
 let ctx = canvas.getContext("2d");
 let x, y;
