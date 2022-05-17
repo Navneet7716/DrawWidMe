@@ -3,7 +3,7 @@ let canvas = document.getElementById("canvas");
 canvas.width = 0.98 * window.innerWidth;
 canvas.height = 0.98 * window.innerHeight;
 
-var io = io.connect("http://localhost:3000/");
+var io = io.connect("https://draw-wid-me.herokuapp.com/");
 
 let ctx = canvas.getContext("2d");
 let x, y;
